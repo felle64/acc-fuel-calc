@@ -20,7 +20,7 @@ export const Data = () =>{
     let result = Calc (number1,number2,number3)
 
     return (<>
-        <h1 className="header">Simpel ACC Fuel Calculator</h1>
+        <h1 className="header">Simple ACC Fuel Calculator</h1>
         <input
             className="input"
             placeholder="Race in min"
