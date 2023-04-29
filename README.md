@@ -2,9 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Node modules needed!
+https://felle64.github.io/acc-fuel-calc/
 
-## Available Scripts
+## Available Scripts (For local useage)
 Install node modules in project directory 
 (You need to download node first!)
 ### `npm i`
