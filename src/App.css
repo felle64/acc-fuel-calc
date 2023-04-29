@@ -1,0 +1,48 @@
+.header{
+  margin-left: 10px;
+}
+.input{
+  width: 50%;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: flex;
+  margin-left: 25%;
+}
+.raceText{
+  width: 50%;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-left: 25%;
+  font-weight: 600; 
+}
+.results{
+  width: 50%;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: 700;
+  margin-left: 25%;
+}
+.safeText{
+  width: 50%;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  margin-left: 25%; 
+}
+.footer{
+border: 5px soild red;
+text-align: center;
+justify-content: center;
+display: flex;
+bottom: 0px;
+}
