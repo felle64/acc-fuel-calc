@@ -3,61 +3,86 @@ import { useState } from 'react';
 
 export const Data = () =>{
     //console.log("Reload");
-    const [number1, setMessage] = useState(0);
-    const [number2, setMessage2] = useState(1);
-    const [number3, setMessage3] = useState(0);
+    const [hours, setHours] = useState(0);
+    const [minutes, setMinutes] = useState(0);
+    const [lapTime, setLapTime] = useState(0);
+    const [fuelPerLap, setFuelPerLap] = useState(0);
+    const [result, setResult] = useState(0);
 
-    const handleChange = (event) => {
-        setMessage(event.target.value);
-      };
-      const handleChange2 = (event) => {
-        setMessage2(event.target.value);
-      };
-      const handleChange3 = (event) => {
-        setMessage3(event.target.value);
-      };
+    const handleHoursChange = (event) => {
+        setHours(event.target.value);
+        const newRaceTime = parseFloat(event.target.value) * 60 + parseFloat(minutes);
+        setResult(Calc(newRaceTime, lapTime, fuelPerLap));
+    };
+    
+    const handleMinutesChange = (event) => {
+        setMinutes(event.target.value);
+        const newRaceTime = parseFloat(hours) * 60 + parseFloat(event.target.value);
+        setResult(Calc(newRaceTime, lapTime, fuelPerLap));
+    };
+    
+    const handleLapTimeChange = (event) => {
+        setLapTime(event.target.value);
+        setResult(Calc(raceTime, event.target.value, fuelPerLap));
+    };
+    
+    const handleFuelPerLapChange = (event) => {
+        setFuelPerLap(event.target.value);
+        setResult(Calc(raceTime, lapTime, event.target.value));
+    };
+    
 
-    let result = Calc (number1,number2,number3)
+    const raceTime = parseFloat(hours) * 60 + parseFloat(minutes);
+
 
     return (<>
         <h1 className="header">Simple ACC Fuel Calculator</h1>
-        <input
-            className="input"
-            placeholder="Race in min"
-            type="number"
-            id="number1"
-            onChange={handleChange}
-        />
-        <div 
-            className="raceText">
-            Race distans in minutes
+        <div className="input-group">
+            <input
+                className="input"
+                placeholder="Hours"
+                type="number"
+                id="hours"
+                onChange={handleHoursChange}
+            />
+            <div className="raceText">Hours</div>
         </div>
-        <input
-            className="input"
-            placeholder="Laptime in sec"
-            type="number"
-            id="number2"
-            onChange={handleChange2}
-        />
-        <div 
-            className="raceText">
-            Average Laptime in seconds
+        <div className="input-group">
+            <input
+                className="input"
+                placeholder="Minutes"
+                type="number"
+                id="minutes"
+                onChange={handleMinutesChange}
+            />
+            <div className="raceText">Minutes</div>
         </div>
-        <input
-            className="input"
-            placeholder="Fuel/Lap"
-            type="number"
-            id="number2"
-            onChange={handleChange3}
-        />
-        <div 
-            className="raceText">
-            Fuel Consumption per lap
+        <div className="input-group">
+            <input
+                className="input"
+                placeholder="Average Laptime in seconds"
+                type="number"
+                id="lapTime"
+                onChange={handleLapTimeChange}
+            />
+            <div className="raceText">Average Laptime in seconds</div>
+        </div>
+        <div className="input-group">
+            <input
+                className="input"
+                placeholder="Fuel/Lap"
+                type="number"
+                id="fuelPerLap"
+                onChange={handleFuelPerLapChange}
+            />
+            <div className="raceText">Fuel Consumption per lap</div>
         </div>
         <div 
             className="results" 
-            type="text">
-            Fuel needed: {Math.round(result*100)/100} L (exact) or {Math.round((result+(number3)*2)*100)/100} (safe)
+            type="text"
+            >
+            
+            Fuel needed: {Math.round(result*100)/100} L (exact) or {Math.round((result+(fuelPerLap)*2)*100)/100} (safe)
         </div>
         <p className="safeText">Safe adds 2 laps extra fuel</p>
         <footer className="footer">
