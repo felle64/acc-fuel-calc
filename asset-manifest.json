@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/acc-fuel-calc/static/css/main.ad1e46b9.css",
-    "main.js": "/acc-fuel-calc/static/js/main.4e2b6455.js",
+    "main.css": "/acc-fuel-calc/static/css/main.5d5f4c52.css",
+    "main.js": "/acc-fuel-calc/static/js/main.a6012abe.js",
     "static/js/787.8964bc5e.chunk.js": "/acc-fuel-calc/static/js/787.8964bc5e.chunk.js",
     "index.html": "/acc-fuel-calc/index.html",
-    "main.ad1e46b9.css.map": "/acc-fuel-calc/static/css/main.ad1e46b9.css.map",
-    "main.4e2b6455.js.map": "/acc-fuel-calc/static/js/main.4e2b6455.js.map",
+    "main.5d5f4c52.css.map": "/acc-fuel-calc/static/css/main.5d5f4c52.css.map",
+    "main.a6012abe.js.map": "/acc-fuel-calc/static/js/main.a6012abe.js.map",
     "787.8964bc5e.chunk.js.map": "/acc-fuel-calc/static/js/787.8964bc5e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ad1e46b9.css",
-    "static/js/main.4e2b6455.js"
+    "static/css/main.5d5f4c52.css",
+    "static/js/main.a6012abe.js"
   ]
 }
